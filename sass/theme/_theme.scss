@@ -1,9 +1,17 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
-// sizing logo's parent to fit header on mobile
+// Sizing logo's parent to fit header on mobile
 @media (max-width: 768px) {
   a.navbar-brand.custom-logo-link {
     max-width:50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container.header-style {
+    max-width: 1920px;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
