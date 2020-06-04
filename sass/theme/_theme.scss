@@ -1,1 +1,72 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+// sizing logo to fit header
+.custom-logo-link {
+    .img-fluid {
+        max-width: 50%;
+    }
+}
+
+
+//navbar-menu changed position on desktop
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+      position: absolute;
+      left: -150px;
+  }
+}
+
+// Defaul: White links against a dark background
+//Possible to change header colors, when needed
+/*
+.navbar-dark {
+    .navbar-brand {
+      color: $navbar-dark-brand-color;
+  
+      @include hover-focus() {
+        color: $navbar-dark-brand-hover-color;
+      }
+    }
+  
+    .navbar-nav {
+      .nav-link {
+        color: $navbar-light-color;
+  
+        @include hover-focus() {
+          color: $navbar-light-hover-color;
+        }
+  
+        &.disabled {
+          color: $navbar-light-disabled-color;
+        }
+      }
+  
+      .show > .nav-link,
+      .active > .nav-link,
+      .nav-link.show,
+      .nav-link.active {
+        color: $navbar-light-active-color;
+      }
+    }
+  
+    .navbar-toggler {
+      color: $navbar-light-color;
+      border-color: $navbar-light-toggler-border-color;
+    }
+  
+    .navbar-toggler-icon {
+      background-image: escape-svg($navbar-light-toggler-icon-bg);
+    }
+  
+    .navbar-text {
+      color: $navbar-light-color;
+      a {
+        color: $navbar-light-active-color;
+  
+        @include hover-focus() {
+          color: $navbar-light-active-color;
+        }
+      }
+    }
+  }
+  */
