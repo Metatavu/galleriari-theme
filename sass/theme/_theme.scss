@@ -31,6 +31,21 @@
 }
 
 // Default: White links against a dark background
+
+@media (max-width: 767px) {
+  .dropdown-toggle ~ .dropdown-menu, .dropdown-menu {
+    display:block;
+  }
+}
+
+.dropdown-toggle:hover ~ .dropdown-menu, .dropdown-menu:hover {
+  display:block;
+}
+
+.dropdown-menu {
+  margin: 0;
+}
+
 //Possible to change header colors, when needed
 /*
 .navbar-dark {

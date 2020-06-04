@@ -129,6 +129,257 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 				)
 			)
 		);
+
+		    /* HERO settings ********/
+
+		$wp_customize->add_section('galleriari_hero_section', array(
+		'title' => 'Hero',
+		'description'   => 'Update hero image and video'
+		));
+
+		$wp_customize->add_setting('galleriari_hero_image_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'galleriari_hero_img_control',
+			array(
+			'label' => 'Edit hero image',
+			'settings'  => 'galleriari_hero_image_setting',
+			'section'   => 'galleriari_hero_section'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_hero_video_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Upload_Control(
+			$wp_customize,
+			'galleriari_hero_vid_control',
+			array(
+			'label' => 'Edit hero video',
+			'settings'  => 'galleriari_hero_video_setting',
+			'section'   => 'galleriari_hero_section'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_hero_title', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_hero_title',
+			array(
+			'label' => 'Hero title',
+			'section' => 'galleriari_hero_section',
+			'settings' => 'galleriari_hero_title',
+			'type' => 'textarea'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_hero_text_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_hero_text_control',
+			array(
+			'label' => 'Hero text',
+			'section' => 'galleriari_hero_section',
+			'settings' => 'galleriari_hero_text_setting',
+			'type' => 'textarea'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_hero_button1_text_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_hero_button1_text_control',
+			array(
+			'label' => 'First button text',
+			'section' => 'galleriari_hero_section',
+			'settings' => 'galleriari_hero_button1_text_setting',
+			'type' => 'text'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_hero_button1_url_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_hero_button1_url_control',
+			array(
+			'label' => 'First button url',
+			'section' => 'galleriari_hero_section',
+			'settings' => 'galleriari_hero_button1_url_setting',
+			'type' => 'url'
+			)
+		)
+		);
+
+		
+		$wp_customize->add_setting('galleriari_hero_button2_text_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_hero_button2_text_control',
+			array(
+			'label' => 'Second button text',
+			'section' => 'galleriari_hero_section',
+			'settings' => 'galleriari_hero_button2_text_setting',
+			'type' => 'text'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_hero_button2_url_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_hero_button2_url_control',
+			array(
+			'label' => 'Second button url',
+			'section' => 'galleriari_hero_section',
+			'settings' => 'galleriari_hero_button2_url_setting',
+			'type' => 'url'
+			)
+		)
+		);
+
+/************Hero settings end *************/
+
+		$wp_customize->add_section('galleriari_footer_section', array(
+		'title' => 'Footer',
+		'description'   => 'Update footer texts'
+		));
+
+		$wp_customize->add_setting('galleriari_footer1_text_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_footer1_text_control',
+			array(
+			'label' => 'First left text',
+			'section' => 'galleriari_footer_section',
+			'settings' => 'galleriari_footer1_text_setting',
+			'type' => 'textarea'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_footer2_text_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_footer2_text_control',
+			array(
+			'label' => 'Second left text',
+			'section' => 'galleriari_footer_section',
+			'settings' => 'galleriari_footer2_text_setting',
+			'type' => 'textarea'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_footer3_text_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_footer3_text_control',
+			array(
+			'label' => 'Middle text',
+			'section' => 'galleriari_footer_section',
+			'settings' => 'galleriari_footer3_text_setting',
+			'type' => 'textarea'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_footer4_text_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_footer4_text_control',
+			array(
+			'label' => 'Second right text',
+			'section' => 'galleriari_footer_section',
+			'settings' => 'galleriari_footer4_text_setting',
+			'type' => 'textarea'
+			)
+		)
+		);
+
+		$wp_customize->add_setting('galleriari_footer5_text_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_footer5_text_control',
+			array(
+			'label' => 'Right text',
+			'section' => 'galleriari_footer_section',
+			'settings' => 'galleriari_footer5_text_setting',
+			'type' => 'textarea'
+			)
+		)
+		);
+		
+		$wp_customize->add_setting('galleriari_footer_icon_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'galleriari_footer_icons_control',
+			array(
+			'label' => 'Icons',
+			'section' => 'galleriari_footer_section',
+			'settings' => 'galleriari_footer_icon_setting',
+			'type' => 'textarea'
+			)
+		)
+		);
 	}
 } // End of if function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );
