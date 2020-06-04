@@ -1,20 +1,5 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
-// Sizing logo's parent to fit header on mobile
-@media (max-width: 768px) {
-  a.navbar-brand.custom-logo-link {
-    max-width:50%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container.header-style {
-    max-width: 1920px;
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-}
-
 // sizing logo to fit header
 .custom-logo-link {
     .img-fluid {
@@ -22,15 +7,14 @@
     }
 }
 
-//navbar-menu position changed on wider screens/landscape
+
+//navbar-menu changed position on desktop
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav .dropdown-menu {
       position: absolute;
       left: -150px;
   }
 }
-
-// Default: White links against a dark background
 
 @media (max-width: 767px) {
   .dropdown-toggle ~ .dropdown-menu, .dropdown-menu {
@@ -46,6 +30,111 @@
   margin: 0;
 }
 
+.page-image-container {
+  height: 400px;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.page-banner-content-container{
+  width: auto;
+}
+
+.page-entry-title {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 0;
+  font-size: 30px;
+  color: #fff;
+}
+
+.hero-image-container {
+  position: relative;
+  height:80vw;
+  max-height: 800px;
+  width:100%;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+}
+
+.hero-video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-banner-content-container{
+  width: auto;
+  text-align: left;
+  margin-right: 15%;
+  z-index: 2;
+
+  .hero-banner-button.btn {
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 5px;
+
+    &.btn-light {
+      color: #fff;
+      border: 1px solid #fff;
+      background-color: transparent;
+    }
+
+    &.btn-dark {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+}
+
+.hero-banner-title {
+  font-family: 'tahuregular';
+  font-size: 9vw;
+  line-height: 130px;
+  color: #DA1024;
+}
+
+.hero-banner-subtitle {
+  color: #fff;
+  font-size: 4vw;
+  line-height: 130px;
+  padding-top: 11px;
+  padding-bottom: 35px;
+}
+
+// Defaul: White links against a dark background
 //Possible to change header colors, when needed
 /*
 .navbar-dark {
