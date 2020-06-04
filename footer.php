@@ -21,21 +21,57 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<div class="col-md-12">
+				<div class="col-md-1">
 
-				<footer class="site-footer" id="colophon">
+				</div>
+				<div class="col-md-2">
+				<div class="site-info">
+						<?php understrap_site_info(); ?>
 
+					</div><!-- .site-info -->
+				</div>
+				<div class="col-md-2">
+				<div class="site-info">	
+
+						<?php understrap_site_info(); ?>
+
+					</div><!-- .site-info -->
+				</div>
+				<div class="col-md-2">
 					<div class="site-info">
 
 						<?php understrap_site_info(); ?>
 
 					</div><!-- .site-info -->
+				</div>
+				<div class="col-md-2">
+					<div class="site-info">
 
-				</footer><!-- #colophon -->
+						<?php understrap_site_info(); ?>
 
-			</div><!--col end -->
+					</div><!-- .site-info -->
+				</div>
+				<div class="col-md-2">
+					<div class="site-info">
+
+						<?php understrap_site_info(); ?>
+
+					</div><!-- .site-info -->
+				</div>
+				<div class="col-md-1">
+				</div>
 
 		</div><!-- row end -->
+
+		<div class="row">
+			<div class="col-md-5">
+			</div>
+			<div class="col-md-2">
+				IKONIT
+			</div>
+			<div class="col-md-5">
+			</div>
+		</div>
 
 	</div><!-- container end -->
 
