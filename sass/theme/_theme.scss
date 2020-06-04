@@ -1,5 +1,12 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+// sizing logo-div to fit header on mobile
+@media (max-width: 768px) {
+  a.navbar-brand.custom-logo-link {
+    max-width:50%;
+  }
+}
+
 // sizing logo to fit header
 .custom-logo-link {
     .img-fluid {
@@ -7,8 +14,7 @@
     }
 }
 
-
-//navbar-menu changed position on desktop
+//navbar-menu position changed on wider screens/landscape
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav .dropdown-menu {
       position: absolute;
@@ -16,7 +22,7 @@
   }
 }
 
-// Defaul: White links against a dark background
+// Default: White links against a dark background
 //Possible to change header colors, when needed
 /*
 .navbar-dark {
