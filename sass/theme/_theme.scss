@@ -7,7 +7,18 @@
     }
 }
 
-/*// White links against a dark background
+
+//navbar-menu changed position on desktop
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav .dropdown-menu {
+      position: absolute;
+      left: -150px;
+  }
+}
+
+// Defaul: White links against a dark background
+//Possible to change header colors, when needed
+/*
 .navbar-dark {
     .navbar-brand {
       color: $navbar-dark-brand-color;
