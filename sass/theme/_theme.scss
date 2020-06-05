@@ -99,3 +99,37 @@
     }
   }
   */
+
+  .entry-title {
+    margin-top:1rem;
+    margin-bottom: 2rem;
+    color:red;
+  }
+
+  .entry-content {
+    figure {
+    margin-top:4rem;
+    align-content: center !important;
+    }
+  }
+
+  // added class
+  .header-below-content-image {
+    margin-bottom: 2rem;
+    margin-top:5rem;
+  }
+
+  .wp-block-column p {
+    text-align: left;
+  }
+
+  @media (min-width: 782px) {
+    .wp-block-column:not(:first-child) {
+      margin-left: 8rem;
+    }
+  }
+
+
+  .entry-content {
+    margin-bottom: 10rem;
+  }
