@@ -30,8 +30,6 @@
   }
 }
 
-// Default: White links against a dark background
-
 @media (max-width: 767px) {
   .dropdown-toggle ~ .dropdown-menu, .dropdown-menu {
     display:block;
@@ -107,9 +105,8 @@
   }
 
   .entry-content {
-    figure {
+    figure, .wp-block-columns {
     margin-top:4rem;
-    align-content: center !important;
     }
   }
 
@@ -124,12 +121,23 @@
   }
 
   @media (min-width: 782px) {
-    .wp-block-column:not(:first-child) {
-      margin-left: 8rem;
-    }
+      .wp-block-column:not(:first-child) {
+        margin-left: 8rem;
+      }
   }
-
 
   .entry-content {
     margin-bottom: 10rem;
+  }
+
+  //Gallery fixed margin
+  @media (min-width: 600px){
+    .blocks-gallery-grid.columns-4 .blocks-gallery-image, .blocks-gallery-grid.columns-4 .blocks-gallery-item, .wp-block-gallery.columns-4 .blocks-gallery-image, .wp-block-gallery.columns-4 .blocks-gallery-item {
+      width: calc((100% - 100px)/4);
+      margin-right: 30px;
+    }
+  }
+
+  .blocks-gallery-grid {
+    margin-bottom: 4rem;
   }
