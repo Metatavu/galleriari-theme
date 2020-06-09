@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * Template Name: Nayttely-page template
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -19,10 +19,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<?php if ( is_front_page() ) : ?>
-	<?php get_template_part( 'global-templates/front-page' ); ?>
-<?php endif; ?>
-
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -30,23 +26,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<!-- "" => text-center"" -->
 		<div class="row text-center">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
-			<main class="site-main" id="main">
+			<main class="site-main nayttely" id="main">
+				
 
 				<?php
-				if ( !is_front_page() ) :
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'loop-templates/content', 'page' );
+				while ( have_posts() ) {
+					the_post();
+					get_template_part( 'loop-templates/content', 'nayttely' );
 
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
+
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) {
+						comments_template();
 					}
-				endif;
+				}
 				?>
 
 			</main><!-- #main -->

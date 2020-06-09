@@ -237,37 +237,19 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		)
 		);
 
-		
-		$wp_customize->add_setting('galleriari_hero_button2_text_setting', array(
+		$wp_customize->add_setting('secondary_title_setting', array(
 		//default value
 		));
 
 		$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'galleriari_hero_button2_text_control',
+			'secondary_title_control',
 			array(
-			'label' => 'Second button text',
+			'label' => 'Secondary title',
 			'section' => 'galleriari_hero_section',
-			'settings' => 'galleriari_hero_button2_text_setting',
+			'settings' => 'secondary_title_setting',
 			'type' => 'text'
-			)
-		)
-		);
-
-		$wp_customize->add_setting('galleriari_hero_button2_url_setting', array(
-		//default value
-		));
-
-		$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize,
-			'galleriari_hero_button2_url_control',
-			array(
-			'label' => 'Second button url',
-			'section' => 'galleriari_hero_section',
-			'settings' => 'galleriari_hero_button2_url_setting',
-			'type' => 'url'
 			)
 		)
 		);
