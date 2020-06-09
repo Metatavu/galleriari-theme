@@ -237,6 +237,23 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		)
 		);
 
+		$wp_customize->add_setting('secondary_title_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'secondary_title_control',
+			array(
+			'label' => 'Secondary title',
+			'section' => 'galleriari_hero_section',
+			'settings' => 'secondary_title_setting',
+			'type' => 'text'
+			)
+		)
+		);
+
 /************Hero settings end *************/
 
 		$wp_customize->add_section('galleriari_footer_section', array(
