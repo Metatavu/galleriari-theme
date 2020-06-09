@@ -4,23 +4,46 @@
   background-color: #fff !important;
 }
 
+
+@media (min-width: 1200px) {
+  .container.header-style {
+    max-width: 1600px;
+
+  }
+
 #page-wrapper {
   background-color: #fff;
+
 }
 
 // sizing logo to fit header
 .custom-logo-link {
     .img-fluid {
-        max-width: 50%;
+        max-width: 200px;
     }
 }
-
 
 //navbar-menu changed position on desktop
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-nav .dropdown-menu {
       position: absolute;
       left: -150px;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+      padding-right: 2rem;
+      padding-left: .5rem;
+      font-size: 15px;
+      font-family: sans-serif;
+      letter-spacing: -0.07px;
+      text-transform: uppercase;
+      opacity: 1
   }
 }
 
