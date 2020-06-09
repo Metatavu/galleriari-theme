@@ -145,6 +145,22 @@
 
   //Nayttely-page template styling
   .nayttely {
+    .entry-content {
+      h2:first-child {
+        margin-bottom:6rem;
+      }
+    }
+  }
+
+  .nayttely {
+    .entry-content {
+      figure {
+        margin-top:0;
+      }
+    }
+  }
+  
+  .nayttely {
     .wp-block-columns {
       .wp-block-column:not(:first-child) {
         text-align: left;
