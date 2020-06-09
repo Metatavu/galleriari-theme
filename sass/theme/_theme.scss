@@ -9,16 +9,15 @@
 
 @media (min-width: 1200px) {
   .container.header-style {
-    max-width: 1920px;
-    margin-right: 15px;
-    margin-left: 15px;
+    max-width: 1600px;
+
   }
 }
 
 // sizing logo to fit header
 .custom-logo-link {
     .img-fluid {
-        max-width: 50%;
+        max-width: 200px;
     }
 }
 
@@ -30,7 +29,21 @@
   }
 }
 
-// Default: White links against a dark background
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+      padding-right: 2rem;
+      padding-left: .5rem;
+      font-size: 15px;
+      font-family: sans-serif;
+      letter-spacing: -0.07px;
+      text-transform: uppercase;
+      opacity: 1
+  }
+}
 
 @media (max-width: 767px) {
   .dropdown-toggle ~ .dropdown-menu, .dropdown-menu {
