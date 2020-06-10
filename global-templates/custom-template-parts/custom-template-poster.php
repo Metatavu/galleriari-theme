@@ -33,9 +33,10 @@ defined( 'ABSPATH' ) || exit;
                 $the_query->the_post();
 
                 echo '<img class="video" src="'. get_the_post_thumbnail_url() .'" alt="" style="">';
-                echo '<div class="hero-banner-content-container">';
-                echo '<h1 class="hero-banner-title">'. get_the_title() .' </h1>';
-                echo '<h2 class="hero-banner-subtitle">'. nl2br(($post->post_excerpt)) .' </h2>';
+                echo '<div class="poster-wrapper">';
+                echo '<div class="poster-banner-content-container">';
+                echo '<h1 class="poster-banner-title">'. get_the_title() .' </h1>';
+                echo '<h2 class="poster-banner-subtitle">'. nl2br(($post->post_excerpt)) .' </h2>';
                 echo '<div class="hero-banner-button"><a href="'.get_permalink($post->ID).'"  class="btn btn-light hero-banner-button btn-light" >'. $heroBtn1Text .'</a>';
 
             endwhile;
@@ -43,7 +44,7 @@ defined( 'ABSPATH' ) || exit;
             // Restore original Post Data if needed
             wp_reset_postdata();
             ?>
-
+            </div>
             </div>
         </div>
     </div>
