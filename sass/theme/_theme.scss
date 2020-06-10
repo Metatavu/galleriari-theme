@@ -55,19 +55,40 @@
 }
 
 @media (max-width: 767px) {
-  .dropdown-toggle ~ .dropdown-menu, .dropdown-menu {
-    display:block;
-  }
 
   .nav-link {
     text-align: center;
     margin-bottom: 2vw;
+    letter-spacing: -0.1px;
+    font-size:20px;
   }
 
   .navbar-nav:first-child {
     margin-top: 8vw;
   }
+
+  .dropdown-item {
+    text-align:center;
+    font-size:15px;
+    margin-bottom:2vw;
+  }
+
+  ul .dropdown-menu:first-child {
+    padding-top:4vw;
+  }
+
+  ul .dropdown-menu:last-child {
+    padding-bottom:8vw;
+  }
+
+  ul .dropdown-menu {
+    background-color: #F7F6EF;
+  }
 }
+/*
+.dropdown-toggle ~ .dropdown-menu, .dropdown-menu {
+    display:block;
+  }
 
 .dropdown-toggle:hover ~ .dropdown-menu, .dropdown-menu:hover {
   display:block;
@@ -75,7 +96,8 @@
 
 .dropdown-menu {
   margin: 0;
-}
+  
+}*/
 
 .page-image-container {
   height: 400px;
