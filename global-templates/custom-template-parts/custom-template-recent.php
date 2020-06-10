@@ -11,13 +11,15 @@
 defined( 'ABSPATH' ) || exit;
 
 $secondaryTitle = get_theme_mod( 'secondary_title_setting' );
+$custom_more_recent = "Lisää ajankohtaisia"
+
 ?>
 
 <!-- AJANKOHTAISTA -->
 
 
 <div class="wrapper" id="page-wrapper">
-	<div class="container" id="content" tabindex="-1">
+	<div class="container container-maxwidth mt-5" id="content" tabindex="-1">
 		<!-- "" => text-center"" -->
 		<div class="row text-center">
 			<!-- Do the left sidebar check -->
@@ -47,7 +49,7 @@ $secondaryTitle = get_theme_mod( 'secondary_title_setting' );
 
                                     $the_query->the_post();
 
-                                    echo '<li><div class="wp-block-latest-posts__featured-image"><img width="150" height="150" src="'. get_the_post_thumbnail_url() .'" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style=""></div>';
+                                    echo '<li><div class="wp-block-latest-posts__featured-image"><img src="'. get_the_post_thumbnail_url() .'" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style=""></div>';
                                     echo '<a href="' . get_permalink($post->ID) . '">' . get_the_title() . '</a></li>';
 
                                 endwhile;
@@ -56,11 +58,13 @@ $secondaryTitle = get_theme_mod( 'secondary_title_setting' );
                                 wp_reset_postdata();
                             ?>
                             </ul>
-                            <p></p>
+
+
+                            <div class="row aling-items-middle">
+                                <?php echo '<div class="hero-banner-button col-md-12"><a href="'.get_permalink($post->ID).'" class="btn btn-red hero-banner-button" > '.$custom_more_recent.' </a></div>'; ?>
+                            </div>
 
 	                    </div><!-- .entry-content -->
-	                <footer class="entry-footer">
-	                </footer><!-- .entry-footer -->
 
                     </article><!-- #post-## -->
 

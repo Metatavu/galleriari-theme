@@ -138,12 +138,6 @@
     padding-right: 60px;
     margin: 5px;
 
-    &.btn-light {
-      color: #fff;
-      border: 1px solid #fff;
-      background-color: transparent;
-    }
-
     &.btn-dark {
       color: #fff;
       background-color: #000;
@@ -151,19 +145,55 @@
   }
 }
 
-.hero-banner-title, .poster-banner-title {
+.btn-light {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  margin: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.btn-red {
+  color: #DA1024 !important;
+  border: 1px solid #DA1024 !important;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  margin: 5px;    
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.hero-banner-title {
   font-family: 'tahuregular';
   font-size: 9vw;
   line-height: 130px;
   color: #DA1024;
 }
 
-.hero-banner-subtitle, .poster-banner-title {
+.hero-banner-subtitle {
   color: #fff;
   font-size: 4vw;
   line-height: 130px;
   padding-top: 11px;
   padding-bottom: 35px;
+}
+
+.poster-banner-title  {
+  color: #000;
+  font-size: 2vw;
+  padding-top: 11px;
+}
+
+.poster-banner-subtitle {
+  color: #fff;
+  font-size: 2vw;
+  padding-top: 11px;
 }
 
 // Defaul: White links against a dark background
@@ -341,6 +371,16 @@
 .poster-wrapper {
   background-color: #DA1024;
   z-index: 1;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+@media (min-width: 767px) {
+  .poster-wrapper {
+    margin-right: 50%;
+  }
 }
 
 #article-wrapper {
@@ -348,4 +388,31 @@
   background-attachment: fixed;
   background-position: center;
   background-size: contain;
+}
+
+@media (min-width: 767px) {
+  .article-content-left {
+    padding-left: 30%;
+    padding-right: 5%;
+  }
+
+  .article-content-right {
+    padding-right: 30%;
+    padding-left: 5%;
+  }
+
+  .text-right-md {
+    text-align: right!important;
+  }
+
+  .text-left-md {
+    text-align: left!important;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container-maxwidth {
+    max-width: 85vw !important;
+  } 
 }

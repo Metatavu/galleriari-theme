@@ -18,7 +18,7 @@ $custom_more_button = "Lue lisää"
 
 
 <div class="wrapper" id="article-wrapper" style="background-image: url( <?php echo esc_attr( $bgimage ); ?> );">
-	<div class="container" id="content" tabindex="-1">
+	<div class="container container-maxwidth" id="content" tabindex="-1">
 		<!-- "" => text-center"" -->
 		<div class="row text-center">
 			<!-- Do the left sidebar check -->
@@ -39,18 +39,18 @@ $custom_more_button = "Lue lisää"
 
 
                                     if ($i) {
-                                        echo '<div class="row"><div class="col-md-6 article-img"><img width="150" height="150" src="'. get_the_post_thumbnail_url() .'" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style=""></div>';
-                                        echo '<div class="col-md-6 article-content"> <h2>' . get_the_title() . ' </h2>' ;
-                                        echo get_the_content();
-                                        echo '<div class="hero-banner-button"><a href="'.get_permalink($post->ID).'"  class="btn btn-light hero-banner-button btn-light" > '.$custom_more_button.' </a></div></div>';
+                                        echo '<div class="row mt-5 align-items-center"><div class="col-12 order-md-1 col-md-6 article-img"><img src="'. get_the_post_thumbnail_url() .'" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style=""></div>';
+                                        echo '<div class="col-12 order-md-2 col-md-6"><div class="article-content-right text-left-md"> <h2>' . get_the_title() . ' </h2>' ;
+                                        echo wp_trim_words( get_the_content(), 20 ) .'</div>';
+                                        echo '<div class="hero-banner-button article-content-right text-left-md"><a href="'.get_permalink($post->ID).'" class="btn btn-red hero-banner-button" > '.$custom_more_button.' </a></div></div>';
                                         echo '</div>';
                                         $i = false;
                                     }
                                     else {
-                                        echo '<div class="row"><div class="col-md-6 article-content"> <h2>' . get_the_title() . ' </h2>';
-                                        echo get_the_content();
-                                        echo '<div class="hero-banner-button"><a href="'.get_permalink($post->ID).'"  class="btn btn-light hero-banner-button btn-light" > '.$custom_more_button.' </a></div></div>';
-                                        echo '<div class="col-md-6 article-img"><img width="150" height="150" src="'. get_the_post_thumbnail_url() .'" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style=""></div>';
+                                        echo '<div class="row mt-5 align-items-center"><div class="col-12 order-md-4 col-md-6 article-img"><img src="'. get_the_post_thumbnail_url() .'" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" style=""></div>';
+                                        echo '<div class="col-12 order-md-3 col-md-6"><div class="article-content-left text-right-md"> <h2>' . get_the_title() . ' </h2>';
+                                        echo wp_trim_words( get_the_content(), 20 ) .'</div>';
+                                        echo '<div class="hero-banner-button article-content-left text-right-md"><a href="'.get_permalink($post->ID).'" class="btn btn-red hero-banner-button" > '.$custom_more_button.' </a></div></div>';
                                         echo '</div>';
                                         $i = true;
                                     }   
