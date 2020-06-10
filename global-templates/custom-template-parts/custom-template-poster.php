@@ -11,15 +11,13 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+$poster_title = "SEURAAVA NÄYTTELY";
+$custom_read_more = "Lue lisää";
 ?>
 
 <div class="wrapper" id="wrapper-hero">
 
     <div class="hero-image-container" style="z-index: 0;">
-    <div class="hero-video">
-    </div>
-
-
         <?php
             $the_query = new WP_Query( array( 
                 'orderby' => 'date',
@@ -35,9 +33,9 @@ defined( 'ABSPATH' ) || exit;
                 echo '<img class="video" src="'. get_the_post_thumbnail_url() .'" alt="" style="">';
                 echo '<div class="poster-wrapper">';
                 echo '<div class="poster-banner-content-container">';
-                echo '<h1 class="poster-banner-title">'. get_the_title() .' </h1>';
+                echo '<h2 class="poster-banner-title">'. $poster_title .' </h2>';
                 echo '<h2 class="poster-banner-subtitle">'. nl2br(($post->post_excerpt)) .' </h2>';
-                echo '<div class="hero-banner-button"><a href="'.get_permalink($post->ID).'"  class="btn btn-light hero-banner-button btn-light" >'. $heroBtn1Text .'</a>';
+                echo '<div class="hero-banner-button"><a href="'.get_permalink($post->ID).'"  class="btn btn-light hero-banner-button" >'. $custom_read_more .'</a>';
 
             endwhile;
 
