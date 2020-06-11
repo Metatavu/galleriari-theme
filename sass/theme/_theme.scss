@@ -125,7 +125,6 @@
 
 .hero-banner-content-container{
   width: auto;
-  max-width:1600px;
   text-align: left;
   margin-right: 30%;
   z-index: 2;
@@ -405,15 +404,15 @@ body {
 
 @media (min-width: 767px) {
   .article-content-left {
-    padding-left: 30%;
+    padding-left: 50%;
     padding-right: 5%;
-    margin-bottom: 1.5vw;
+    margin-bottom: 2vw;
   }
 
   .article-content-right {
-    padding-right: 30%;
+    padding-right: 50%;
     padding-left: 5%;
-    margin-bottom: 1.5vw;
+    margin-bottom: 2vw;
   }
 
   .text-right-md {
@@ -423,8 +422,34 @@ body {
   .text-left-md {
     text-align: left!important;
   }
+
+  .article-content-right,.article-content-left {
+    h2 {
+      margin-bottom:1em;
+    }
+  }
 }
 
+@media (max-width: 992px) {
+  .article-content-left {
+    padding-left: 10%;
+    padding-right: 5%;
+    margin-bottom: 2vw;
+  }
+
+  .article-content-right {
+    padding-right: 10%;
+    padding-left: 5%;
+    margin-bottom: 2vw;
+  }
+}
+
+.article-img {
+  img.wp-post-image {
+    max-width: 90%;
+    height: auto;
+  } 
+}
 
 @media (min-width: 1200px) {
   .container-maxwidth {
