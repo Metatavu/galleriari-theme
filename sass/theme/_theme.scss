@@ -2,6 +2,7 @@
 
 #main-nav {
   background-color: #fff !important;
+  max-height: 120px;
 }
 
 
@@ -162,7 +163,7 @@
 .hero-banner-content-container{
   width: auto;
   text-align: left;
-  margin-right: 15%;
+  margin-right: 30%;
   z-index: 2;
 
   .hero-banner-button.btn {
@@ -182,6 +183,16 @@
   }
 }
 
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+
 .btn-light {
   color: #fff !important;
   border: 1px solid #fff !important;
@@ -199,7 +210,7 @@
   border: 1px solid #DA1024 !important;
   background-color: transparent !important;
   border-radius: 0px !important;
-  margin: 5px;    
+  margin: 5px 0px 5px 0px;    
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 60px;
@@ -207,18 +218,20 @@
 }
 
 .hero-banner-title {
+  max-height: 8vw;
   font-family: 'tahuregular';
-  font-size: 9vw;
+  font-size: 5vw;
   line-height: 130px;
   color: #DA1024;
+  padding-bottom: .5vw;
 }
 
 .hero-banner-subtitle {
   color: #fff;
-  font-size: 4vw;
-  line-height: 130px;
+  font-size: 3vw;
+  line-height: 61px;
   padding-top: 11px;
-  padding-bottom: 35px;
+  padding-bottom: 1.5vw;
 }
 
 .poster-banner-title  {
@@ -405,7 +418,6 @@
   }
 }
 
-
 .poster-wrapper {
   background-color: #DA1024;
   z-index: 1;
@@ -425,18 +437,20 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: contain;
+  background-size: 95%;
 }
 
 @media (min-width: 767px) {
   .article-content-left {
-    padding-left: 30%;
+    padding-left: 50%;
     padding-right: 5%;
+    margin-bottom: 2vw;
   }
 
   .article-content-right {
-    padding-right: 30%;
+    padding-right: 50%;
     padding-left: 5%;
+    margin-bottom: 2vw;
   }
 
   .text-right-md {
@@ -446,8 +460,34 @@
   .text-left-md {
     text-align: left!important;
   }
+
+  .article-content-right,.article-content-left {
+    h2 {
+      margin-bottom:1em;
+    }
+  }
 }
 
+@media (max-width: 992px) {
+  .article-content-left {
+    padding-left: 10%;
+    padding-right: 5%;
+    margin-bottom: 2vw;
+  }
+
+  .article-content-right {
+    padding-right: 10%;
+    padding-left: 5%;
+    margin-bottom: 2vw;
+  }
+}
+
+.article-img {
+  img.wp-post-image {
+    max-width: 90%;
+    height: auto;
+  } 
+}
 
 @media (min-width: 1200px) {
   .container-maxwidth {
