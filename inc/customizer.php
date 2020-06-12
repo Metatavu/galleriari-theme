@@ -254,6 +254,22 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 		)
 		);
 
+		$wp_customize->add_setting('bgimage_setting', array(
+		//default value
+		));
+
+		$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'bgimage_control',
+			array(
+			'label' => 'Background image',
+			'section' => 'galleriari_hero_section',
+			'settings' => 'bgimage_setting',
+			)
+		)
+		);
+
 /************Hero settings end *************/
 
 		$wp_customize->add_section('galleriari_footer_section', array(

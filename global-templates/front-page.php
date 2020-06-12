@@ -14,6 +14,10 @@ defined( 'ABSPATH' ) || exit;
 
 <?php 
 get_template_part( 'global-templates/custom-template-parts/custom-template-hero' );
+
+get_template_part( 'global-templates/custom-template-parts/custom-template-article' );
+
 get_template_part( 'global-templates/custom-template-parts/custom-template-recent' );
+
 get_template_part( 'global-templates/custom-template-parts/custom-template-poster' );
 ?>

@@ -175,17 +175,35 @@
     padding-right: 60px;
     margin: 5px;
 
-    &.btn-light {
-      color: #fff;
-      border: 1px solid #fff;
-      background-color: transparent;
-    }
-
     &.btn-dark {
       color: #fff;
       background-color: #000;
     }
   }
+}
+
+.btn-light {
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  margin: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.btn-red {
+  color: #DA1024 !important;
+  border: 1px solid #DA1024 !important;
+  background-color: transparent !important;
+  border-radius: 0px !important;
+  margin: 5px;    
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .hero-banner-title {
@@ -203,6 +221,18 @@
   padding-bottom: 35px;
 }
 
+.poster-banner-title  {
+  color: #000;
+  font-size: 2vw;
+  padding-top: 11px;
+}
+
+.poster-banner-subtitle {
+  color: #fff;
+  font-size: 2vw;
+  padding-top: 11px;
+}
+
 // Defaul: White links against a dark background
 //Possible to change header colors, when needed
 /*
@@ -210,167 +240,217 @@
     .navbar-brand {
       color: $navbar-dark-brand-color;
   
+    @include hover-focus() {
+      color: $navbar-dark-brand-hover-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-light-color;
+
       @include hover-focus() {
-        color: $navbar-dark-brand-hover-color;
+        color: $navbar-light-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
       }
     }
-  
-    .navbar-nav {
-      .nav-link {
-        color: $navbar-light-color;
-  
-        @include hover-focus() {
-          color: $navbar-light-hover-color;
-        }
-  
-        &.disabled {
-          color: $navbar-light-disabled-color;
-        }
-      }
-  
-      .show > .nav-link,
-      .active > .nav-link,
-      .nav-link.show,
-      .nav-link.active {
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-light-color;
+    border-color: $navbar-light-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: escape-svg($navbar-light-toggler-icon-bg);
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+    a {
+      color: $navbar-light-active-color;
+
+      @include hover-focus() {
         color: $navbar-light-active-color;
       }
     }
-  
-    .navbar-toggler {
-      color: $navbar-light-color;
-      border-color: $navbar-light-toggler-border-color;
-    }
-  
-    .navbar-toggler-icon {
-      background-image: escape-svg($navbar-light-toggler-icon-bg);
-    }
-  
-    .navbar-text {
-      color: $navbar-light-color;
-      a {
-        color: $navbar-light-active-color;
-  
-        @include hover-focus() {
-          color: $navbar-light-active-color;
-        }
-      }
-    }
   }
-  */
+}
+*/
 
-  .entry-title {
-    margin-top:1rem;
-    margin-bottom: 2rem;
-    color:red;
+.entry-title {
+  margin-top:1rem;
+  margin-bottom: 2rem;
+  color:red;
+}
+
+.entry-content {
+  figure, .wp-block-columns {
+  margin-top:4rem;
   }
+}
 
+// added class
+.header-below-content-image {
+  margin-bottom: 2rem;
+  margin-top:5rem;
+}
+
+.wp-block-column p {
+  text-align: left;
+}
+
+@media (min-width: 782px) {
+    .wp-block-column:not(:first-child) {
+      margin-left: 8rem;
+    }
+}
+
+.entry-content h2 {
+  margin-bottom: 2rem;
+  margin-top:5rem;
+}
+
+/*
+//Gallery fixed margin
+@media (min-width: 600px){
+  .blocks-gallery-grid.columns-4 .blocks-gallery-image, .blocks-gallery-grid.columns-4 .blocks-gallery-item, .wp-block-gallery.columns-4 .blocks-gallery-image, .wp-block-gallery.columns-4 .blocks-gallery-item {
+    width: calc((100% - 100px)/4);
+    margin-right: 30px;
+  }
+}
+
+.blocks-gallery-grid {
+  margin-bottom: 4rem;
+}*/
+
+//Nayttely-page template styling
+.nayttely {
   .entry-content {
-    figure, .wp-block-columns {
-    margin-top:4rem;
-    }
-  }
-
-  .entry-content h2 {
-    margin-bottom: 2rem;
-    margin-top:5rem;
-  }
-
-  .wp-block-column p {
-    text-align: left;
-  }
-
-  @media (min-width: 782px) {
-      .wp-block-column:not(:first-child) {
-        margin-left: 8rem;
-      }
-  }
-
-  .entry-content {
-    margin-bottom: 10rem;
-  }
-
-  /*
-  //Gallery fixed margin
-  @media (min-width: 600px){
-    .blocks-gallery-grid.columns-4 .blocks-gallery-image, .blocks-gallery-grid.columns-4 .blocks-gallery-item, .wp-block-gallery.columns-4 .blocks-gallery-image, .wp-block-gallery.columns-4 .blocks-gallery-item {
-      width: calc((100% - 100px)/4);
-      margin-right: 30px;
-    }
-  }
-
-  .blocks-gallery-grid {
-    margin-bottom: 4rem;
-  }*/
-
-  //Nayttely-page template styling
-  .nayttely {
-    .entry-content {
-      h2:first-child {
-        margin-bottom:6rem;
-      }
-    }
-  }
-
-  .nayttely {
-    .entry-content {
-      figure {
-        margin-top:0;
-      }
-    }
-  }
-  
-  .nayttely {
-    .wp-block-columns {
-      .wp-block-column:not(:first-child) {
-        text-align: left;
-      }  
-    }
-  }
-
-  .nayttely {
-    .wp-block-columns {
-      .wp-block-column:not(:first-child) {
-        h3:not(:first-child) {
-          margin-bottom: 4rem;
-        } 
-      }  
-    }
-  }
-
-  .nayttely {
-    .wp-block-columns {
-      .wp-block-column:not(:first-child) {
-        p {
-          margin-top: 0;
-          margin-bottom: 0;
-        } 
-        a {
-          color:red;
-        }
-      }  
-    }
-  }
-
-  .nayttely {
-    .wp-block-columns {
-      .wp-block-column:not(:first-child) {
-        p:nth-child(4){
-          font-weight:bold;
-        }
-        p:nth-child(6){
-          margin-top:2rem;
-        }
-        p:nth-child(7){
-          margin-top:2rem;
-        }
-      }  
-    }
-  }
-
-  .nayttely {
-    .wp-block-columns {
+    h2:first-child {
       margin-bottom:6rem;
     }
   }
+}
 
-  
+.nayttely {
+  .entry-content {
+    figure {
+      margin-top:0;
+    }
+  }
+}
+
+.nayttely {
+  .wp-block-columns {
+    .wp-block-column:not(:first-child) {
+      text-align: left;
+    }  
+  }
+}
+
+.nayttely {
+  .wp-block-columns {
+    .wp-block-column:not(:first-child) {
+      h3:not(:first-child) {
+        margin-bottom: 4rem;
+      } 
+    }  
+  }
+}
+
+.nayttely {
+  .wp-block-columns {
+    .wp-block-column:not(:first-child) {
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      } 
+      a {
+        color:red;
+      }
+    }  
+  }
+}
+
+.nayttely {
+  .wp-block-columns {
+    .wp-block-column:not(:first-child) {
+      p:nth-child(4){
+        font-weight:bold;
+      }
+      p:nth-child(6){
+        margin-top:2rem;
+      }
+      p:nth-child(7){
+        margin-top:2rem;
+      }
+    }  
+  }
+}
+
+.nayttely {
+  .wp-block-columns {
+    margin-bottom:6rem;
+  }
+}
+
+
+.poster-wrapper {
+  background-color: #DA1024;
+  z-index: 1;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+@media (min-width: 767px) {
+  .poster-wrapper {
+    margin-right: 50%;
+  }
+}
+
+#article-wrapper {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (min-width: 767px) {
+  .article-content-left {
+    padding-left: 30%;
+    padding-right: 5%;
+  }
+
+  .article-content-right {
+    padding-right: 30%;
+    padding-left: 5%;
+  }
+
+  .text-right-md {
+    text-align: right!important;
+  }
+
+  .text-left-md {
+    text-align: left!important;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container-maxwidth {
+    max-width: 85vw !important;
+  } 
+}
