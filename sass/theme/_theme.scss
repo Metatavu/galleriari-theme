@@ -1,19 +1,29 @@
-// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+$header_color: #FE0006;
 
-#main-nav {
+a:active {
+  color: none;
+  background-color: #fafafa!important;
+}
+
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+#main-nav, #woocommerce-wrapper, #single-wrapper, #page-wrapper {
   background-color: #fff !important;
 }
 
+.wrapper {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 767px){
+  .wrapper {
+    padding-bottom: 30px;
+  }
+}
 
 @media (min-width: 1200px) {
   .container.header-style {
     max-width: 1600px;
   }
-}
-
-#page-wrapper {
-  background-color: #fff;
-
 }
 
 // sizing logo to fit header
@@ -33,7 +43,6 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: black;
-  font-family: 'Regular 15px/20px Open Sans';
   text-transform: uppercase;
   letter-spacing: -0.07px;
   font-size: 15px;
@@ -72,6 +81,9 @@
     font-size:15px;
     margin-bottom:2vw;
   }
+  .dropdown-item:active {
+    color: black;
+  }
 
   ul .dropdown-menu:first-child {
     padding-top:4vw;
@@ -79,11 +91,14 @@
 
   ul .dropdown-menu:last-child {
     padding-bottom:8vw;
+    display: block;
   }
 
   ul .dropdown-menu {
-    background-color: #F7F6EF;
+    background-color: #FFFFFF;
+    border: 0px;
   }
+
 }
 
 .dropdown-toggle:hover ~ .dropdown-menu, .dropdown-menu:hover {
@@ -121,6 +136,7 @@
 .hero-image-container {
   position: relative;
   height:80vw;
+  min-height: 400px;
   max-height: 800px;
   width:100%;
   background-size:cover !important;
@@ -160,6 +176,7 @@
   text-align: left;
   margin-right: 30%;
   z-index: 2;
+  margin-left: 50px;
 
   .hero-banner-button.btn {
     border-radius: 0;
@@ -180,7 +197,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: -apple-system,BlinkMacSystemFont,"opensans",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","opensans Emoji","opensans Symbol","Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -200,44 +217,58 @@ body {
   padding-right: 60px;
 }
 
-.btn-red {
-  color: #DA1024 !important;
-  border: 1px solid #DA1024 !important;
+.btn-red, .btn-outline-primary, .wp-block-button {
+  color: $header_color !important;
+  border: 1px solid $header_color !important;
   background-color: transparent !important;
   border-radius: 0px !important;
-  margin: 5px 0px 5px 0px;    
+  margin: 0px;    
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 60px;
   padding-right: 60px;
 }
+.wp-block-button__link{
+  background-color: #fff;
+}
+.wc-block-pagination{
+    display: none;
+}
+.btn:not(:disabled):not(.disabled), .wpcf7 input:not(:disabled):not(.disabled)[type=submit] {
+  font-weight: bold;
+}
 
-.hero-banner-title {
-  max-height: 8vw;
+.hero-banner-title,.entry-header .entry-title {
   font-family: 'tahuregular';
-  font-size: 5vw;
-  line-height: 130px;
-  color: #DA1024;
-  padding-bottom: .5vw;
+  font-size: 7rem;
+  color: $header_color;
+}
+@media (max-width: 767px) {
+  .hero-banner-title, .entry-header .entry-title  {
+    font-size: 4rem;
+  }
 }
 
 .hero-banner-subtitle {
   color: #fff;
-  font-size: 3vw;
-  line-height: 61px;
+  font-size: 3rem;
   padding-top: 11px;
-  padding-bottom: 1.5vw;
+}
+@media (max-width: 767px) {
+  .hero-banner-subtitle {
+    font-size: 1.2rem;
+  }
 }
 
 .poster-banner-title  {
   color: #000;
-  font-size: 2vw;
+  font-size: 2rem;
   padding-top: 11px;
 }
 
 .poster-banner-subtitle {
   color: #fff;
-  font-size: 2vw;
+  font-size: 2rem;
   padding-top: 11px;
 }
 
@@ -295,12 +326,6 @@ body {
   }
 }
 */
-
-.entry-title {
-  margin-top:1rem;
-  margin-bottom: 2rem;
-  color:red;
-}
 
 .entry-content {
   figure, .wp-block-columns {
@@ -385,7 +410,7 @@ body {
         margin-bottom: 0;
       } 
       a {
-        color:red;
+        color: $header_color;
       }
     }  
   }
@@ -414,7 +439,7 @@ body {
 }
 
 .poster-wrapper {
-  background-color: #DA1024;
+  background-color: $header_color;
   z-index: 1;
   padding-right: 2vw;
   padding-left: 2vw;
@@ -458,20 +483,20 @@ body {
 
   .article-content-right,.article-content-left {
     h2 {
-      margin-bottom:1em;
+      margin-bottom: 1em;
     }
   }
 }
 
 @media (max-width: 992px) {
   .article-content-left {
-    padding-left: 10%;
+    padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 2vw;
   }
 
   .article-content-right {
-    padding-right: 10%;
+    padding-right: 5%;
     padding-left: 5%;
     margin-bottom: 2vw;
   }
@@ -488,4 +513,56 @@ body {
   .container-maxwidth {
     max-width: 85vw !important;
   } 
+}
+
+.btn-primary {
+  background-color: $header_color;
+  border-color: $header_color;
+  &:hover, &:active, &:focus  {
+    background-color: $header_color !important;
+    border-color: $header_color !important;
+    opacity: 0.80;
+  }
+}
+
+.custom-front-page{
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.site-info {
+  margin-bottom: 15px;
+}
+
+.recent-custom-image {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  background-size: cover;
+}
+
+.recent_title {
+  font-size: 1.2em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.wp-block-latest-posts.is-grid li {
+  margin: 0px;
+  height: 100%;
+}
+
+.wp-block-button__link {
+  padding: 0px;
+}
+
+.woocommerce-Price-amount {
+  color: black;
+  font-weight: bold;
+}
+
+.content-area {
+  max-width: 1200px;
+  justify-content: center;
 }
