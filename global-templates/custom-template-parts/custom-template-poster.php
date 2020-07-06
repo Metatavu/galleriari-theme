@@ -21,7 +21,7 @@ $custom_read_more = "Lue lisää";
 <div class="wrapper" id="wrapper-hero">
 
     <div class="hero-image-container" style="z-index: 0;">
-                <? php
+                <?php
                 echo '<img class="video" src="'. $posterImg .'" alt="" style="">';
                 echo '<div class="poster-wrapper">';
                 echo '<div class="poster-banner-content-container">';
