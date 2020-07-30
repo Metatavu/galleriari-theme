@@ -49,4 +49,7 @@ function custom_wc_translations($translated){
 	return $translated;
 }
 
-add_filter( 'gettext', 'custom_wc_translations', 20 );
+function load_google_web_font_sample() { 
+	echo '<link href="'. ( is_ssl() ? 'https' : 'http' ) .'://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" type="text/css">';
+	 } 
+	add_action( 'wp_head', 'load_google_web_font_sample', 0 );
