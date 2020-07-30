@@ -1,5 +1,18 @@
 $header_color: #FE0006;
 
+.wc-block-grid__product {
+  border: 0;
+  padding: 5px;
+}
+
+.wc-block-grid__products {
+  margin: 0;
+}
+
+#menu-item-dropdown-71 {
+  padding-right: 0px;
+}
+
 a:active {
   color: none;
   background-color: #fafafa!important;
@@ -197,7 +210,7 @@ a:active {
 
 body {
   margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"opensans",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","opensans Emoji","opensans Symbol","Noto Color Emoji";
+  font-family:"Open Sans" !important; 
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
